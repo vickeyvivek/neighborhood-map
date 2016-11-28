@@ -1,0 +1,88 @@
+html, body {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #006666;
+}
+
+.column{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  width: 100%;
+
+}
+
+h1{
+  margin: auto;
+  padding: 20px 10px 10px 10px;
+  color: #fff;
+}
+
+.row {
+  margin: auto;
+  /*max-width: 1200px;*/
+  width: 100%;
+  display: flex;
+  padding: 10px;
+  height: 100%;
+  flex-flow: row nowrap;
+}
+
+.responsive-menu{
+}
+
+p{
+margin: auto;
+padding: 10px;
+color: #fff;
+}
+
+input{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#mapWrapper{
+  height: 100%;
+  width: 100%;
+}
+
+#map {
+  height: 100%;
+  width: 100%;
+}
+
+ul{
+  padding: 0px;
+  margin: 0px;
+
+}
+
+li{
+  display: flex;
+  width: 100%;
+  flex-flow: row nowrap;
+  list-style-type:none;
+  padding: 10px;
+  color: #fff;
+  padding: 1em 2em;
+}
+
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.col-3 {
+    width: 90%;
+}
+
+.col-9 {
+    width: 100%;
+}

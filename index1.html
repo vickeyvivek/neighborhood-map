@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>neighborhood map project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel= "stylesheet" media="screen and (max-width:500px)" href="css/styleMobile.css">
+</head>
+<body>
+   <div class = "column">
+     <h1>Search your destination !</h1>
+  </div>
+  <div class ="row">
+    <!--Hamberger icon code-->
+    <!--I got help for the hamburger menu code from this website: http://www.internetkultur.at/simple-hamburger-drop-down-menu-with-css-and-jquery/ -->
+    <div class="menuButton">
+      <div class = "hamburger">
+        <!--These span elements are used to hold the blocks that create the hamburger icon-->
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+        <div class="responsive-menu">
+    <div id ="filter" class="col-3">
+      <p>Search </p>
+      <!--textInput allows automatic updates of the filter value based on user input-->
+      <input data-bind="textInput: filter">
+      <!--this creates a reference to anchor the list onto. Its saying for each value in the filteredItems array, place the name in a list element on the DOM-->
+      <ul data-bind="foreach: filteredItems">
+        <!--the $parent is important because This is the view model object in the parent context, the one immeditely outside the current context -->
+        <li data-bind="text: name, click: $parent.listClicker"></li>
+      </ul>
+    </div>
+  </div>
+        <!--Google maps code-->
+  <!--<div id ="mapWrapper" class="col-md-8">-->
+    <!--this creates a reference to anchor the map onto -->
+        <!--<div id="map"></div>
+        </div>
+    </div>-->
+    <!--Google maps code-->
+  <div id ="mapWrapper" class="col-9">
+    <!--this creates a reference to anchor the map onto -->
+    <div id="map"></div>
+  </div>
+</div>
+    <!--Script sources for libraries I am using-->
+  <script src="library/knockout-3.2.0.js"></script>
+  <script src="library/jquery.min.js"></script>
+  <script src="main.js"></script>
+  <!-- This script obtains the information needed to include the google map, it includes my personal API key as well-->
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8dtzRCgVlzC905jc3jSo22vdAIZGsUgg&v=3&callback=initMap" onerror="googleError()"></script>
+    </main>
+</body>
+</html>
